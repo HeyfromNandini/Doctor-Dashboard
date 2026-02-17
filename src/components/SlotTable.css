@@ -1,0 +1,47 @@
+.slot-table-wrap { margin-top: 0; }
+
+.slot-table {
+  table-layout: fixed;
+}
+
+.slot-table .slot-row.row-blocked { opacity: 0.85; background: var(--color-bg-subtle); }
+
+/* Emergency row: border on first cell only so column widths stay consistent */
+.slot-table .slot-row.row-emergency-only td:first-child {
+  border-left: 3px solid var(--color-danger);
+  padding-left: calc(1rem - 3px);
+}
+
+.slot-table .slot-row.row-locked { opacity: 0.88; }
+
+.slot-reason { font-size: 0.8125rem; color: var(--color-muted); margin-left: 0.25rem; }
+
+/* Actions column: fixed width and alignment so buttons don't shift */
+.slot-table th:last-child,
+.slot-table td.slot-actions-cell {
+  width: 1%;
+  white-space: nowrap;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.slot-table .slot-actions-cell .actions-btns,
+.slot-table .slot-actions-cell .btn-sm,
+.slot-table .slot-actions-cell .slot-no-action {
+  display: inline-block;
+}
+
+.slot-table .slot-actions-cell .actions-btns {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+.slot-table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.slot-table td { color: #334155; }

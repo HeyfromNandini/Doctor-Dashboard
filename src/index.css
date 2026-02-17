@@ -1,0 +1,123 @@
+/* Design system – professional clinical dashboard */
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111827;
+  background-color: #f1f5f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --color-primary: #0f766e;
+  --color-primary-hover: #0d9488;
+  --color-primary-muted: #ccfbf1;
+  --color-success: #059669;
+  --color-warning: #b45309;
+  --color-danger: #b91c1c;
+  --color-danger-muted: #fef2f2;
+  --color-muted: #64748b;
+  --color-muted-light: #94a3b8;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f8fafc;
+  --color-sidebar: #0f172a;
+  --color-sidebar-text: #94a3b8;
+  --color-sidebar-text-active: #f1f5f9;
+  --radius: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.06);
+  --transition: 0.15s ease;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-height: 100vh; }
+
+#root { min-height: 100vh; }
+
+input, select, button, textarea {
+  font-family: inherit;
+  font-size: 0.9375rem;
+}
+
+button {
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+/* Status tags – refined */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.tag--confirmed { background: #d1fae5; color: #065f46; }
+.tag--emergency { background: #fee2e2; color: #991b1b; }
+.tag--rescheduled { background: #fef3c7; color: #92400e; }
+.tag--cancelled { background: #f1f5f9; color: #475569; }
+.tag--locked { background: #e2e8f0; color: #475569; }
+.tag--completed { background: #dbeafe; color: #1e40af; }
+.tag--available { background: #d1fae5; color: #065f46; }
+.tag--blocked { background: #f1f5f9; color: #64748b; }
+.tag--emergency-only { background: #fee2e2; color: #991b1b; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Primary button – global */
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+/* Icon alignment in buttons/tags */
+.icon-sm { width: 1rem; height: 1rem; flex-shrink: 0; }
+.icon-md { width: 1.125rem; height: 1.125rem; flex-shrink: 0; }
+.icon-lg { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }

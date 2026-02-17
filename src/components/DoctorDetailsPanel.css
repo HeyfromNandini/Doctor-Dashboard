@@ -1,0 +1,212 @@
+.doctor-panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 100;
+  width: 320px;
+  max-width: calc(100vw - 2rem);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.15);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  animation: doctorPanelIn 0.2s ease;
+}
+
+@keyframes doctorPanelIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.doctor-panel-header {
+  padding: 1.25rem 1.25rem 0.75rem;
+  text-align: center;
+  background: linear-gradient(180deg, var(--color-bg-subtle) 0%, var(--color-bg) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.doctor-panel-avatar {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 0.75rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0d9488 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-panel-name {
+  margin: 0 0 0.25rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.doctor-panel-spec {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.doctor-panel-body {
+  padding: 0.75rem 1.25rem 1rem;
+  max-height: 280px;
+  overflow: auto;
+}
+
+.doctor-panel-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-bg-subtle);
+}
+
+.doctor-panel-row:last-child { border-bottom: none; }
+
+.doctor-panel-icon {
+  flex-shrink: 0;
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+.doctor-panel-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.doctor-panel-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+}
+
+.doctor-panel-value {
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.doctor-panel-accounts {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.doctor-panel-accounts > .doctor-panel-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-panel-account-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-bg-subtle);
+  font-size: 0.8125rem;
+}
+
+.doctor-panel-account-row:last-child { border-bottom: none; }
+
+.doctor-panel-account-name { font-weight: 500; color: #334155; }
+
+.doctor-panel-account-email { color: var(--color-muted); margin-right: auto; }
+
+.doctor-panel-account-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.doctor-panel-account-actions .btn-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.doctor-panel-footer {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.doctor-panel-edit,
+.doctor-panel-add {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+.doctor-panel-edit.btn-icon,
+.doctor-panel-add.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Add doctor modal */
+.add-doctor-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.add-doctor-modal {
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.2);
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid var(--color-border);
+}
+
+.add-doctor-modal h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.add-doctor-modal label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.add-doctor-modal .label-text {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 0.35rem;
+}
+
+.add-doctor-modal .settings-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+}
+
+.add-doctor-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}

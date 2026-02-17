@@ -1,0 +1,112 @@
+.table-wrap {
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.appointment-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg-subtle);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.appointment-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+  color: #334155;
+}
+
+.appointment-table tbody tr {
+  transition: background var(--transition);
+}
+
+.appointment-table tbody tr:last-child td { border-bottom: none; }
+
+.appointment-table tbody tr:not(.row-muted):hover {
+  background: var(--color-bg-subtle);
+  cursor: pointer;
+}
+
+.row-emergency {
+  border-left: 3px solid var(--color-danger);
+  background: var(--color-danger-muted);
+}
+
+.row-emergency:hover { background: #fecaca !important; }
+
+.row-muted { opacity: 0.8; }
+
+.table-empty {
+  text-align: center;
+  color: var(--color-muted);
+  padding: 2.5rem 1rem !important;
+  font-size: 0.875rem;
+}
+
+.symptoms-cell {
+  max-width: 200px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emergency-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.375rem;
+  color: var(--color-danger);
+  vertical-align: middle;
+}
+
+.actions-btns { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.btn-locked {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.row-locked { opacity: 0.88; }
+
+.btn-sm {
+  padding: 0.375rem 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: #475569;
+}
+
+.btn-outline:hover {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-border-strong);
+}
+
+.btn-danger {
+  color: var(--color-danger);
+  border-color: #fecaca;
+}
+
+.btn-danger:hover {
+  background: var(--color-danger-muted);
+  border-color: var(--color-danger);
+}
